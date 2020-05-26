@@ -1,5 +1,5 @@
 '''
-Created on Sep 15, 2018
+Created on Sep 15, 2020
 
 @author: kumarijy
 '''
@@ -10,6 +10,7 @@ Created on Sep 15, 2018
 # Time/space complexity is O(size of pattern)
 def compute_temporary_array(pattern):
     n = len(pattern)
+    print("Just a test print statement")
     lsp = [0 for j in range(n)]
     index = 0
     i = 1
