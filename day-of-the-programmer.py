@@ -1,5 +1,7 @@
 #!/bin/python3
-
+'''FInd the programer day for an year, programmer day is generally happens 256th day of an year in russia.
+Earlier russia follow julian calendar they transist to gregorian calender in 1918, in julian calender leap year is
+caluclated as %4 ==0 and in gregorian.'''
 import math
 import os
 import random
