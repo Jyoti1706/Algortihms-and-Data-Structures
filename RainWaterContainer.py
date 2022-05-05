@@ -12,7 +12,7 @@ from typing import List
 
 
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea_bruteForce(self, height: List[int]) -> int:
         n = len(height)
         max_area = 0
         for p1 in range(n):
@@ -20,6 +20,30 @@ class Solution:
                 area = min(height[p1], height[p2])*(p2-p1)
                 max_area = max(max_area, area)
         return max_area
+
+    def maxArea(self, height: List[int]) -> int:
+        '''
+        :param height array
+        :return: max area
+        :technique: used 2 pointer technique,
+        1. find min of 2 element at p1 and p2, find width i.e p2-p1
+        2. move min of 2 element at p1 and p2 as our result will be affected by minimum element, so move minimum element pointer
+        3. set max_area = max(max_area, new_calculated_area)
+        '''
+        n = len(height)
+        p1 = 0
+        p2 = n-1
+        max_area = 0
+        while p1<p2:
+            area = min(height[p1], height[p2])*(p2-p1)
+            max_area = max(max_area, area)
+            if height[p1]<= height[p2]:
+                p1 += 1
+            else:
+                p2 -= 1
+        return max_area
+
+
 
 
 
