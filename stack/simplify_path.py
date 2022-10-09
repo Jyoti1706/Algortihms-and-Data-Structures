@@ -14,24 +14,22 @@ Return the simplified canonical path.
 '''
 
 
-class Solution:
-
-    def simplify_path(self,path: str) -> str:
-        stack = []
-        for directory in path.split("/"):
-            if directory == "":
+def simplify_path(path: str) -> str:
+    stack = []
+    for directory in path.split("/"):
+        if directory == "":
+            pass
+        elif directory == ".":
+            pass
+        elif directory == "..":
+            try:
+                stack.pop()
+            except:
                 pass
-            elif directory == ".":
-                pass
-            elif directory == "..":
-                try:
-                    stack.pop()
-                except:
-                    pass
-            else:
-                stack.append(directory)
-        return "/"+"/".join(stack)
+        else:
+            stack.append(directory)
+    return "/"+"/".join(stack)
 
 
 path = input()
-print(Solution().simplify_path(path))
+print(simplify_path(path))
