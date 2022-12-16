@@ -11,6 +11,13 @@ class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
         temp_stack=[]
         move = []
+        '''
+        1. put bracket in temp_stack, if its opening
+        2. if its closing , pop the stack.
+            if stack is empty, store index in move list and continue
+            else, continue
+        3. after loop end if len(temp_stack) > 0, move indexes in output list
+        '''
         for i in range(len(s)):
             if s[i] == '(':
                 temp_stack.append(i)
