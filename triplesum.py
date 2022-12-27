@@ -20,7 +20,7 @@ space: O(n^2)
 def triplet_sum(arr, value):
     hashset = {}
     for i in range(len(arr)):
-        for j in range(i+1, len(arry)):
+        for j in range(i+1, len(arr)):
             data = arr[i] + arr[j]
             try:
                 hashset[data].append((arr[i], arr[j]))
