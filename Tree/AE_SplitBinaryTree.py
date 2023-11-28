@@ -1,6 +1,6 @@
 """
 Split the Binary Tree by removing an edge such that sum of 2 sub-tree are equal.
-
+Date : 15-11-2023
 """
 
 # This is an input class. Do not edit.
