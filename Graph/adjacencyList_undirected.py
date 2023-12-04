@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def create_adjacency_list(edge_list):
+def create_GraphList(edge_list):
     adjacency_list = {}
 
     for edge in edge_list:
@@ -22,7 +22,7 @@ def create_adjacency_list(edge_list):
     return adjacency_list
 
 
-def create_adjacency_list_2(edge_list):
+def create_GraphSet(edge_list):
     adjacency_list = defaultdict(set)
 
     for edge in edge_list:
@@ -36,9 +36,9 @@ def create_adjacency_list_2(edge_list):
 
     return adjacency_list
 # Example usage:
-edges = [[1,3],[4,1],[4,3],[2,5],[5,6],[6,7],[7,5],[2,6]]
-adj_list = create_adjacency_list_2(edges)
-
-# Display the result
-for node, neighbors in adj_list.items():
-    print(f"{node}: {neighbors}")
+# edges = [[1,3],[4,1],[4,3],[2,5],[5,6],[6,7],[7,5],[2,6]]
+# adj_list = create_adjacency_list_2(edges)
+#
+# # Display the result
+# for node, neighbors in adj_list.items():
+#     print(f"{node}: {neighbors}")
