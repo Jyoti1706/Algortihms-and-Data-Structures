@@ -30,7 +30,7 @@ class DisjointSet:
         ulp_u = self.find(u)
         ulp_v = self.find(v)
         if ulp_v == ulp_u:
-            return
+            return False
         if self.rank[ulp_v] > self.rank[ulp_u]:
             self.parent[ulp_u] = ulp_v
         elif self.rank[ulp_v] < self.rank[ulp_u]:
@@ -38,6 +38,7 @@ class DisjointSet:
         else:
             self.parent[ulp_v] = ulp_u
             self.rank[ulp_u] += 1
+        return True
 
 
 class Solution:
@@ -53,15 +54,9 @@ class Solution:
         print(adj)
         V = len(adj.keys())
         ds = DisjointSet(V)
-        for u in range(1,V):
-            for v in adj[u]:
-                if u<v:
-                    parentU=ds.find(u)
-                    parentV = ds.find(v)
-                    if parentV == parentU:
-                        res.append([u,v])
-                    ds.union(u,v)
-        return res
+        for n1, n2 in edges:
+            if not ds.union(n1, n2):
+                return [n1, n2]
 
 
 if __name__ == "__main__":
