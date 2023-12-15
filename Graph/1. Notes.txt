@@ -2,3 +2,9 @@ How to identify - Dijkstra Algorithm
 =============================================
 1. weights given for edges
 2. find the shortest path from source and destinations
+time complexity: O(ElogV)
+time complexity: Bellman-Ford O(V*E)
+
+Krushkals:
+1. Sort Edge list in ascending order
+2. Check if nodes are connected or not using Disjoint set
