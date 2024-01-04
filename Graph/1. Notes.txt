@@ -8,3 +8,9 @@ time complexity: Bellman-Ford O(V*E)
 Krushkals:
 1. Sort Edge list in ascending order
 2. Check if nodes are connected or not using Disjoint set
+
+Kosaraju Algorithm:
+
+Used for finding strongly connected component in graph
+=> a component is said to strongly connected if there is path exists from source to destination and destination to
+source in directed graph
