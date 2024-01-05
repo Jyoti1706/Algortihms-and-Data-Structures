@@ -1,0 +1,20 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   Graph/1. Notes.txt
+#	renamed:    Graph/DijKistraAlgo_With_Set.py -> Graph/2.a.DijKistraAlgo_With_Set.py
+#	renamed:    Graph/DijkistraAlog_with_priority_queue.py -> Graph/2.b.DijkistraAlog_with_priority_queue.py
+#	new file:   Graph/3.Floyd-Warshall-Algorithm.py
+#	new file:   Graph/5.PrimsAlgo-MST.py
+#	new file:   Graph/Leetcode-1584-min-cost-to-connect-all-points.py
+#	new file:   Graph/__pycache__/DisjointTest.cpython-312.pyc
+#	new file:   Graph/__pycache__/GraphDS.cpython-312.pyc
+#	new file:   Graph/__pycache__/adjacencyList_undirected.cpython-312.pyc
+#	deleted:    Interviews/S-2.py
+#	new file:   Tree/__pycache__/Tree_DS.cpython-312.pyc
+#
