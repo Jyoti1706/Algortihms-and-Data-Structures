@@ -39,6 +39,7 @@ class Solution:
                     dp[i] = max(dp[i],1+dp[j])
         return max(dp)
 
+
 if __name__ == "__main__":
     obj = Solution()
     nums = [10, 9, 2, 5, 3, 7, 101, 18]
