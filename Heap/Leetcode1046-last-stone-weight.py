@@ -23,12 +23,21 @@ we combine 1 and 1 to get 0 so the array converts to [1] then that's the value o
 """
 import heapq
 
+
 class Solution:
     def lastStoneWeight(self, stones):
+        stones = [-s for s in stones]
         heapq.heapify(stones)
-        print(heapq.heappop(stones))
+        while len(stones) > 1:
+            first = heapq.heappop(stones)
+            second = heapq.heappop(stones)
+            heapq.heappush(stones, first - second)
+        return abs(stones[0])
 
 
-stones = [2,7,4,1,8,1]
-obj = Solution()
-print(obj.lastStoneWeight(stones))
+if __name__ == "__main__":
+    stones = [2, 7, 4, 1, 8, 1]
+    obj = Solution()
+    print(obj.lastStoneWeight(stones))
+    stones = [1]
+    print(obj.lastStoneWeight(stones))

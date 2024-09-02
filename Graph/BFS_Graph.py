@@ -23,6 +23,8 @@ class Graph:
                     queue.append(neighbor)
                     visited[neighbor] = True
 
+
+
 # Example usage:
 # Create a graph
 g = Graph(6)
